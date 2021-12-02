@@ -4,10 +4,6 @@ cmake_minimum_required(VERSION 3.16)
 # `tmp.code-workspace` needs to be changed as well.
 project(ProjectName CXX)
 
-cmake_minimum_required(VERSION 3.16)
-
-# project name
-project(digital_filters CXX)
 
 #--------------- CMake compile config ------------------------------
 enable_language(CXX)
@@ -59,14 +55,14 @@ include_directories(include)
 add_subdirectory(lib)
 
 # libraries
-add_library(ProjectName INTERFACE)
+add_library(${PROJECT_NAME} INTERFACE)
 
 # if you create `add_library` on sub directory, need this sentense.
 #    target_link_libraries(ProjectName INTERFACE sample_lib_name)
 
 # for development executable(optional activate)
-option(DEVELOP_EXECUTABLE_ProjectName "Build develop executable file on ProjectName package" OFF)
-if(DEVELOP_EXECUTABLE_ProjectName)
+option(DEVELOP_EXECUTABLE_${PROJECT_NAME} "Build develop executable file on ProjectName package" OFF)
+if(DEVELOP_EXECUTABLE_${PROJECT_NAME})
 # executable
     add_executable(develop_main develop_main.cpp)
 
