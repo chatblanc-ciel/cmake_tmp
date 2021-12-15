@@ -65,9 +65,7 @@ option(DEVELOP_EXECUTABLE_${PROJECT_NAME} "Build develop executable file on Proj
 if(DEVELOP_EXECUTABLE_${PROJECT_NAME})
 # executable
     add_executable(develop_main develop_main.cpp)
-
-# if you create `add_library` on sub directory, need this sentense.
-#    target_link_libraries(develop_main sample_lib_name)
+        target_link_libraries(develop_main ${PROJECT_NAME})
 endif()
 
 # tests

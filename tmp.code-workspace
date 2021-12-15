@@ -6,6 +6,10 @@
 	],
 	"settings": {
 		"C_Cpp.default.includePath": [
+			"./include",
+			"./include/*"
+		],
+		"files.watcherInclude": [
 			"./include"
 		],
 		"cmake.generator": "MinGW Makefiles",
@@ -13,9 +17,11 @@
 			"-DDEVELOP_EXECUTABLE_ProjectName=ON"
 		],
 		"editor.defaultFormatter": "xaver.clang-format",
+		"C_Cpp.clang_format_fallbackStyle": "WebKit",
+		"clang-format.fallbackStyle": "WebKit",
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
-		"extensions.ignoreRecommendations": false
+		"extensions.ignoreRecommendations": false,
 	},
 	"extensions": {
 		"recommendations": [
